@@ -83,7 +83,7 @@ void oled_render_logo(void) {
 }
 
 bool oled_task_kb(void) {
-    if (!is_keyboard_master()) {
+    if (is_keyboard_master()) {
     draw_bongo();
     } else {
          oled_render_logo();
